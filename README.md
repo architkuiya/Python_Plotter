@@ -1,1 +1,2 @@
-# analytical_engine
+# Python Plotter
+Our project visualises your dataframe.
