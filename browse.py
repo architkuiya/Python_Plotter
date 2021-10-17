@@ -42,9 +42,9 @@ Button(base, text = 'submit').grid(row=11,column=3)
 #ADD COMMAND
 
 Button(base, text='pairplot', command= lambda:pair_plot(file_opener.df)).grid(row=12, column = 0)
-Button(base, text='bar chart', command= lambda:bar_plot(column1.get(), column2.get())).grid(row=13, column = 0)
-Button(base, text='scatter plot', command= lambda:scatter_plot(column1.get(), column2.get())).grid(row=14, column = 0)
-Button(base, text='histogram', command= lambda:hist_plot(column1.get(), column2.get())).grid(row=15, column = 0)
-Button(base, text='linechart', command= lambda:plot(column1.get(), column2.get())).grid(row=16, column = 0)
+Button(base, text='bar chart', command= lambda:bar_plot(file_opener.df[column1.get()], file_opener.df[column2.get()])).grid(row=13, column = 0)
+Button(base, text='scatter plot', command= lambda:scatter_plot(file_opener.df[column1.get()], file_opener.df[column2.get()])).grid(row=14, column = 0)
+Button(base, text='histogram', command= lambda:hist_plot(file_opener.df[column1.get()], file_opener.df[column2.get()])).grid(row=15, column = 0)
+Button(base, text='linechart', command= lambda:plot(file_opener.df[column1.get()], file_opener.df[column2.get()])).grid(row=16, column = 0)
 
 base.mainloop()
