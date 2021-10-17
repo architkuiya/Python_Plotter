@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import filedialog
+from graphs import *
 import pandas as pd
+
 base = Tk()
 
 # Create a widget
@@ -18,7 +20,7 @@ def file_opener():
    else:
       Label(base, text = 'File imported successfully').grid(row=6, column=0)   
    file_path = input.name
-   df = pd.read_csv(file_path)
+   file_opener.df = pd.read_csv(file_path)
 
 # Browse button
 Label(base, text = 'Click here to browse the csv file').grid(row=5, column=0)
@@ -39,10 +41,10 @@ Button(base, text = 'submit').grid(row=11,column=3)
 
 #ADD COMMAND
 
-Button(base, text='pairplot').grid(row=12, column = 0)
-Button(base, text='bar chart').grid(row=13, column = 0)
-Button(base, text='scatter plot').grid(row=14, column = 0)
-Button(base, text='histogram').grid(row=15, column = 0)
-Button(base, text='linechart').grid(row=16, column = 0)
+Button(base, text='pairplot', command= lambda:pair_plot(file_opener.df)).grid(row=12, column = 0)
+Button(base, text='bar chart', command= lambda:bar_plot(column1.get(), column2.get())).grid(row=13, column = 0)
+Button(base, text='scatter plot', command= lambda:scatter_plot(column1.get(), column2.get())).grid(row=14, column = 0)
+Button(base, text='histogram', command= lambda:hist_plot(column1.get(), column2.get())).grid(row=15, column = 0)
+Button(base, text='linechart', command= lambda:plot(column1.get(), column2.get())).grid(row=16, column = 0)
 
 base.mainloop()
