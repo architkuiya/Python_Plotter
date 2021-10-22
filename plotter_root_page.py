@@ -9,6 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, \
+    QPushButton, QVBoxLayout, QFileDialog
 
 
 class Ui_Dialog(object):
@@ -51,6 +54,9 @@ class Ui_Dialog(object):
         self.importing.setGeometry(QtCore.QRect(350, 560, 141, 27))
         self.importing.setStyleSheet("background-color: rgb(192, 28, 40);")
         self.importing.setObjectName("importing")
+
+        self.importing.clicked.connect(self.open_file) # connect clicked to self.open()
+
         self.label_3 = QtWidgets.QLabel(Dialog)
         self.label_3.setGeometry(QtCore.QRect(380, 520, 91, 19))
         self.label_3.setObjectName("label_3")
@@ -66,6 +72,12 @@ class Ui_Dialog(object):
         self.importing.setText(_translate("Dialog", "IMPORT CSV FILE"))
         self.label_3.setText(_translate("Dialog", "OR CLICK ->"))
 
+    #importing csv file
+    def open_file(self):
+            path = QFileDialog.getOpenFileName(filter='*.csv')
+                                            
+            if path != ('', ''):
+                print(path[0])
 
 if __name__ == "__main__":
     import sys
