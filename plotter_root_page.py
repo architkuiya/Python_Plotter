@@ -9,19 +9,17 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, \
-    QPushButton, QVBoxLayout, QFileDialog
 
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Plotter")
-        Dialog.resize(871, 589)
-        self.columnView_2 = QtWidgets.QColumnView(Dialog)
+class Ui_Plotter(object):
+    def setupUi(self, Plotter):
+        Plotter.setObjectName("Plotter")
+        Plotter.resize(871, 589)
+        Plotter.setStyleSheet("background-color: rgb(246, 245, 244);")
+        self.columnView_2 = QtWidgets.QColumnView(Plotter)
         self.columnView_2.setGeometry(QtCore.QRect(0, 0, 871, 131))
         self.columnView_2.setObjectName("columnView_2")
-        self.label = QtWidgets.QLabel(Dialog)
+        self.label = QtWidgets.QLabel(Plotter)
         self.label.setGeometry(QtCore.QRect(80, 20, 701, 81))
         font = QtGui.QFont()
         font.setFamily("dsrom10")
@@ -30,8 +28,8 @@ class Ui_Dialog(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.dnd = QtWidgets.QColumnView(Dialog)
-        self.dnd.setGeometry(QtCore.QRect(70, 200, 751, 291))
+        self.dnd = QtWidgets.QColumnView(Plotter)
+        self.dnd.setGeometry(QtCore.QRect(70, 170, 751, 231))
         self.dnd.setMouseTracking(False)
         self.dnd.setAcceptDrops(True)
         self.dnd.setStyleSheet("background-color: rgb(97, 53, 131);\n"
@@ -42,48 +40,43 @@ class Ui_Dialog(object):
         self.dnd.setDragDropMode(QtWidgets.QAbstractItemView.DragDrop)
         self.dnd.setDefaultDropAction(QtCore.Qt.TargetMoveAction)
         self.dnd.setObjectName("dnd")
-        self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(330, 200, 231, 41))
+        self.label_2 = QtWidgets.QLabel(Plotter)
+        self.label_2.setGeometry(QtCore.QRect(320, 170, 231, 41))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "color: rgb(246, 245, 244);")
         self.label_2.setObjectName("label_2")
-        self.importing = QtWidgets.QPushButton(Dialog)
-        self.importing.setGeometry(QtCore.QRect(350, 560, 141, 27))
+        self.importing = QtWidgets.QPushButton(Plotter)
+        self.importing.setGeometry(QtCore.QRect(340, 470, 181, 27))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.importing.setFont(font)
         self.importing.setStyleSheet("background-color: rgb(192, 28, 40);")
         self.importing.setObjectName("importing")
-
-        self.importing.clicked.connect(self.open_file) # connect clicked to self.open()
-
-        self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(380, 520, 91, 19))
+        self.label_3 = QtWidgets.QLabel(Plotter)
+        self.label_3.setGeometry(QtCore.QRect(400, 440, 91, 19))
         self.label_3.setObjectName("label_3")
+        self.pushButton = QtWidgets.QPushButton(Plotter)
+        self.pushButton.setGeometry(QtCore.QRect(720, 550, 141, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
+        self.label_5 = QtWidgets.QLabel(Plotter)
+        self.label_5.setGeometry(QtCore.QRect(660, 510, 181, 19))
+        self.label_5.setObjectName("label_5")
 
-        self.retranslateUi(Dialog)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(Plotter)
+        QtCore.QMetaObject.connectSlotsByName(Plotter)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Plotter):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "PYTHON PLOTTER"))
-        self.label_2.setText(_translate("Dialog", "   DRAG AND DROP"))
-        self.importing.setText(_translate("Dialog", "IMPORT CSV FILE"))
-        self.label_3.setText(_translate("Dialog", "OR CLICK ->"))
-
-    #importing csv file
-    def open_file(self):
-            path = QFileDialog.getOpenFileName(filter='*.csv')
-                                            
-            if path != ('', ''):
-                print(path[0])
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+        Plotter.setWindowTitle(_translate("Plotter", "Dialog"))
+        self.label.setText(_translate("Plotter", "PYTHON PLOTTER"))
+        self.label_2.setText(_translate("Plotter", "   DRAG AND DROP"))
+        self.importing.setText(_translate("Plotter", "IMPORT CSV FILE"))
+        self.label_3.setText(_translate("Plotter", "OR CLICK ->"))
+        self.pushButton.setText(_translate("Plotter", "Proceed"))
+        self.label_5.setText(_translate("Plotter", "File Import check"))

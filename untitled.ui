@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(98, 160, 234);</string>
+   <string notr="true">background-color: rgb(246, 245, 244);</string>
   </property>
   <widget class="QColumnView" name="columnView_2">
    <property name="geometry">
@@ -105,8 +105,8 @@ color: rgb(246, 245, 244);</string>
   <widget class="QPushButton" name="importing">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>480</y>
+     <x>340</x>
+     <y>470</y>
      <width>181</width>
      <height>27</height>
     </rect>
@@ -152,6 +152,19 @@ color: rgb(246, 245, 244);</string>
    </property>
    <property name="text">
     <string>Proceed</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>510</y>
+     <width>181</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>File Import check</string>
    </property>
   </widget>
  </widget>
