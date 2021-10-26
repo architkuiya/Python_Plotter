@@ -16,9 +16,9 @@ def open_file(self):
                 print(path[0])
 
                 ui.label_5.setText("File imported successfully")
-        except:
+        except: 
             ui.label_5.setText("File not imported")
-            
+
 if __name__ == "__main__":
     
     ui.setupUi(Dialog)
