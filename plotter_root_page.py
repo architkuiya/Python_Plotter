@@ -9,9 +9,17 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from second_window import *
 
 
 class Ui_Plotter(object):
+
+    def open_sec_win(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+
     def setupUi(self, Plotter):
         Plotter.setObjectName("Plotter")
         Plotter.resize(871, 589)
@@ -64,6 +72,8 @@ class Ui_Plotter(object):
         font.setPointSize(14)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.clicked.connect(self.open_sec_win)
+
         self.label_5 = QtWidgets.QLabel(Plotter)
         self.label_5.setGeometry(QtCore.QRect(660, 510, 181, 19))
         self.label_5.setObjectName("label_5")

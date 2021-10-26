@@ -20,6 +20,8 @@ class Ui_MainWindow(object):
         self.charts = QtWidgets.QTabWidget(self.centralwidget)
         self.charts.setGeometry(QtCore.QRect(0, 10, 811, 541))
         self.charts.setObjectName("charts")
+
+
         self.pair_plot = QtWidgets.QWidget()
         self.pair_plot.setObjectName("pair_plot")
         self.groupBox_8 = QtWidgets.QGroupBox(self.pair_plot)
@@ -180,6 +182,8 @@ class Ui_MainWindow(object):
         self.line_10.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_10.setObjectName("line_10")
         self.charts.addTab(self.line_plot, "")
+
+        
         self.bar_plot = QtWidgets.QWidget()
         self.bar_plot.setObjectName("bar_plot")
         self.label_2 = QtWidgets.QLabel(self.bar_plot)

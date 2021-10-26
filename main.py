@@ -1,4 +1,5 @@
 from plotter_root_page import *
+from second_window import *
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, \
     QPushButton, QVBoxLayout, QFileDialog
@@ -7,6 +8,21 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, \
 app = QtWidgets.QApplication(sys.argv)
 Dialog = QtWidgets.QDialog() 
 ui = Ui_Plotter()
+
+
+def pair():
+    
+    marker = marker_pp.currentText()
+    print(marker)
+
+
+
+
+
+
+
+
+
 
 #importing function
 def open_file(self):
@@ -28,3 +44,4 @@ if __name__ == "__main__":
     Dialog.show()
     sys.exit(app.exec_())
 # importing function open_file
+
