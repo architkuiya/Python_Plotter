@@ -13,7 +13,8 @@ from second_window import *
 
 
 class Ui_Plotter(object):
-
+    
+    #second window function
     def open_sec_win(self):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
@@ -72,7 +73,9 @@ class Ui_Plotter(object):
         font.setPointSize(14)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
-        self.pushButton.clicked.connect(self.open_sec_win)
+
+        #second window click button (proceed button)
+        # self.pushButton.clicked.connect(self.open_sec_win)
 
         self.label_5 = QtWidgets.QLabel(Plotter)
         self.label_5.setGeometry(QtCore.QRect(660, 510, 181, 19))
