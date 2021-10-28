@@ -47,68 +47,13 @@
     <string>PYTHON PLOTTER</string>
    </property>
   </widget>
-  <widget class="QColumnView" name="dnd">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>170</y>
-     <width>751</width>
-     <height>231</height>
-    </rect>
-   </property>
-   <property name="mouseTracking">
-    <bool>false</bool>
-   </property>
-   <property name="acceptDrops">
-    <bool>true</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(97, 53, 131);
-background-color: rgb(119, 118, 123);
-border-color: rgb(99, 69, 44);</string>
-   </property>
-   <property name="dragEnabled">
-    <bool>true</bool>
-   </property>
-   <property name="dragDropOverwriteMode">
-    <bool>true</bool>
-   </property>
-   <property name="dragDropMode">
-    <enum>QAbstractItemView::DragDrop</enum>
-   </property>
-   <property name="defaultDropAction">
-    <enum>Qt::TargetMoveAction</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>170</y>
-     <width>231</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>18</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(246, 245, 244);</string>
-   </property>
-   <property name="text">
-    <string>   DRAG AND DROP</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="importing">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>470</y>
-     <width>181</width>
-     <height>27</height>
+     <x>300</x>
+     <y>390</y>
+     <width>221</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="font">
@@ -123,20 +68,7 @@ color: rgb(246, 245, 244);</string>
     <string>IMPORT CSV FILE</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>440</y>
-     <width>91</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>OR CLICK -&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="proceed">
    <property name="geometry">
     <rect>
      <x>720</x>
@@ -165,6 +97,19 @@ color: rgb(246, 245, 244);</string>
    </property>
    <property name="text">
     <string>File Import check</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>781</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600;&quot;&gt;Hi! Welcome to our BI tool&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#1a5fb4;&quot;&gt;We are going to help you take &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#1a5fb4;&quot;&gt;the best business decisions by &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#1a5fb4;&quot;&gt;analysing your data through &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#1a5fb4;&quot;&gt;our wide range of charts. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; text-decoration: underline;&quot;&gt;Please browse for your .csv file by clicking the button given below.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
  </widget>
