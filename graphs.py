@@ -22,6 +22,6 @@ def plot(x, y, color, linewidth):
     plt.plot(x, y, color=color, linewidth=linewidth)
     plt.show()
 
-def pair_plot(dataframe, hue, kind, diagkind, marker, linewidth, height):
-    sb.pairplot(dataframe, hue=hue, kind=kind, diag_kind=diagkind, linewidth=linewidth, markers=marker, height=height)
+def pair_plot(dataframe, hue, kind, diagkind, marker, height):
+    sb.pairplot(dataframe, hue=hue, kind=kind, diag_kind=diagkind, markers=marker, height=height)
     plt.show()

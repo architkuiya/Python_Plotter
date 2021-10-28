@@ -9,6 +9,14 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, \
 app = QtWidgets.QApplication(sys.argv)
 Dialog = QtWidgets.QDialog() 
 ui = Ui_Plotter()
+ui2 = Ui_MainWindow()
+
+def line_plt():
+    print("DONE")
+    colour = ui2.colors_lp.currentText()
+    print(colour)
+    
+
 
 #importing csv file 
 def open_file(self):
@@ -25,8 +33,12 @@ if __name__ == "__main__":
     
     ui.setupUi(Dialog)
     
+    
     #import button
     ui.importing.clicked.connect(open_file)
     
     Dialog.show()
     sys.exit(app.exec_())
+
+    x = "jaskirat"
+    ui2.pushButton_2.clicked.connect(lambda x: print(x))
