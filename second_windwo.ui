@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pair_plot">
      <attribute name="title">
@@ -254,7 +254,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="plot_pp">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -427,7 +427,7 @@
        <string>Column 1 (x coordinate)</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="colors_lp">
+     <widget class="QComboBox" name="color_lp">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -462,7 +462,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="plot_lp">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -753,7 +753,7 @@
       <property name="title">
        <string>            Align</string>
       </property>
-      <widget class="QComboBox" name="alig_bp">
+      <widget class="QComboBox" name="align_bp">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -822,7 +822,7 @@
        <string>Color</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="plot_bp">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -899,7 +899,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QComboBox" name="linewidth_bp_2">
+     <widget class="QComboBox" name="linewidth_bp">
       <property name="geometry">
        <rect>
         <x>550</x>
@@ -961,16 +961,16 @@
      <zorder>groupBox_3</zorder>
      <zorder>color_bp</zorder>
      <zorder>label_5</zorder>
-     <zorder>pushButton</zorder>
+     <zorder>plot_bp</zorder>
      <zorder>line_9</zorder>
-     <zorder>linewidth_bp_2</zorder>
+     <zorder>linewidth_bp</zorder>
      <zorder>label_8</zorder>
     </widget>
     <widget class="QWidget" name="histogram">
      <attribute name="title">
       <string>Histogram</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="plot_hst">
       <property name="geometry">
        <rect>
         <x>690</x>
@@ -1308,7 +1308,7 @@
       </widget>
      </widget>
      <zorder>frame_5</zorder>
-     <zorder>pushButton_3</zorder>
+     <zorder>plot_hst</zorder>
      <zorder>color_hst</zorder>
      <zorder>line_11</zorder>
      <zorder>groupBox_4</zorder>
@@ -1447,7 +1447,7 @@
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-     <widget class="QPushButton" name="plot">
+     <widget class="QPushButton" name="plot_sp">
       <property name="geometry">
        <rect>
         <x>690</x>
