@@ -1,9 +1,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from graphs import *
+import pandas as pd
+
+f=open("temp/dataframe_path.txt", "r")
+data = f.read()
+
+data_frame = pd.read_csv(data)
+
 
 class Ui_MainWindow(object):
 
-    def pair_plt(self, data):
+    def pair_plt(self, data=data_frame):
         self.kind = self.kind_pp.text()
         self.diagonal_kind = self.diagonal_kind_pp.text()
         self.height = self.height_pp.text()
@@ -12,7 +19,17 @@ class Ui_MainWindow(object):
         self.linewidth = self.linewidth_pp.currentText()
 
         pair_plot(data, self.kind, self.diagonal_kind, self.marker, self.height)
-    
+
+    def plt(self, data=data_frame):
+        
+        self.x = self.x_lp.text()
+        self.y = self.y_lp.text()
+        self.linewidth = self.linewidth_lp.currentText()
+        self.color = self.color_lp.currentText()
+
+        plot(data[self.x], data[self.y], self.color, self.linewidth)
+
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -146,8 +163,11 @@ class Ui_MainWindow(object):
         self.color_lp.addItem("")
         self.color_lp.addItem("")
         self.color_lp.addItem("")
+
         self.plot_lp = QtWidgets.QPushButton(self.line_plot)
+        self.plot_lp.clicked.connect(self.plt)
         self.plot_lp.setGeometry(QtCore.QRect(690, 460, 111, 41))
+        
         font = QtGui.QFont()
         font.setFamily("Noto Mono")
         font.setPointSize(25)

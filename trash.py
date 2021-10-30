@@ -3,4 +3,4 @@ import pandas as pd
 
 data = pd.read_csv("/home/jaskirats/Code/Python_Plotter_prev/Files/RELIANCE.csv")
 
-pair_plot(data, None, "kde", diagkind=None, marker="#", height=10)
+pair_plot(data, kind='auto', marker="s", height=10, diagkind='auto')

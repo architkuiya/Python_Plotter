@@ -1,5 +1,5 @@
 from plotter_root_page import *
-
+import os
 # from second_window import *
 import pandas as pd
 import sys
@@ -22,9 +22,13 @@ def open_file(self):
         # try:
             path = QFileDialog.getOpenFileName(filter='*.csv')          
             if path != ('', ''):
-                print(path[0])
+                # print(path[0])
 
-                open_file.data = pd.read_csv(path[0])
+                f = open("temp/dataframe_path.txt", 'w')
+                with open('temp/dataframe_path.txt', 'w') as f:
+                    f.write(path[0])
+                    f.close()
+
 
                 #proceed button
                 ui.proceed.clicked.connect(ui.open_sec_win)
@@ -34,6 +38,8 @@ def open_file(self):
         #     ui.label_5.setText("File not imported")
 
 if __name__ == "__main__":
+
+    os.remove("temp/dataframe_path.txt")
     
     ui.setupUi(Dialog)
     
